@@ -46,9 +46,13 @@ function updateImage(direction){
     if(direction == "next"){
         currentImageIndex++;
     }else if (direction == "prev"){
-        urrentImageIndex--;
+        currentImageIndex--;
     }else{
-        currentImageIndex++
+        currentImageIndex++;
+    }
+
+    if(currentImageIndex >= imageURLS.length){
+        currentImageIndex = 0;
     }
 
     if(currentImageIndex < 0){
